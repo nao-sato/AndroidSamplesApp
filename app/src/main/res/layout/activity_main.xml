@@ -9,7 +9,8 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <com.example.ktandroidsample.SamplesView
+        <com.example.ktAndroidSample.SamplesView
+            android:id="@+id/samples_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
