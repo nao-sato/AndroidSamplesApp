@@ -35,7 +35,7 @@ class MediaPlayerActivity : AppCompatActivity() {
 
 
     private fun onPrepare(){
-        val mediaFileUri: Uri = Uri.parse("android.resource://${packageName}/${R.raw.sample_music}")
+        val mediaFileUri: Uri = Uri.parse("android.resource://${packageName}/${R.raw.sample1_music}")
         try {
             player?.apply{
                 setDataSource(applicationContext,mediaFileUri)

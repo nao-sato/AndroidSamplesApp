@@ -7,8 +7,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.example.ktAndroidSample.databinding.ActivityMainBinding
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
+import com.example.ktAndroidSample.service.ServiceActivity
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
 
@@ -50,6 +52,7 @@ class MainActivity : AppCompatActivity() {
     private fun startActivity(activitySimpleName: String) {
         when (activitySimpleName) {
             MediaPlayerActivity::class.java.simpleName -> MediaPlayerActivity.start(this)
+            ServiceActivity::class.java.simpleName -> ServiceActivity.start(this)
         }
     }
 

@@ -18,6 +18,12 @@
         </activity>
         <activity android:name=".mediaPlayer.MediaPlayerActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".service.ServiceActivity"
+            android:screenOrientation="portrait"/>
+        <service android:name=".service.SoundManageService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
     </application>
 
 </manifest>
