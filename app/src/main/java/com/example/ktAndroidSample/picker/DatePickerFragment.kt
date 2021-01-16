@@ -1,18 +1,13 @@
-package com.example.ktAndroidSample.Picker
+package com.example.ktAndroidSample.picker
 
 import android.app.DatePickerDialog
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.example.ktAndroidSample.R
 import java.util.*
 
-class DatePick : DialogFragment(), DatePickerDialog.OnDateSetListener {
+class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val c = Calendar.getInstance()
@@ -23,9 +18,6 @@ class DatePick : DialogFragment(), DatePickerDialog.OnDateSetListener {
         return DatePickerDialog(this.context as Context, activity as PickerActivity, year, month, day)
     }
 
-    override fun onDateSet(view: android.widget.DatePicker, year: Int,
-                           monthOfYear: Int, dayOfMonth: Int) {
-
-    }
+    override fun onDateSet(view: android.widget.DatePicker, year: Int, monthOfYear: Int, dayOfMonth: Int) {}
 
 }

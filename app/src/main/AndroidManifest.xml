@@ -23,7 +23,7 @@
             android:name=".service.ServiceActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Picker.PickerActivity"
+            android:name=".picker.PickerActivity"
             android:screenOrientation="portrait" />
 
 

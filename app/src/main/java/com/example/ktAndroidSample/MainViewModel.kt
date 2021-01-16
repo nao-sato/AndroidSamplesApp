@@ -2,7 +2,7 @@ package com.example.ktAndroidSample
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.ktAndroidSample.Picker.PickerActivity
+import com.example.ktAndroidSample.picker.PickerActivity
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
 import com.example.ktAndroidSample.service.ServiceActivity
 

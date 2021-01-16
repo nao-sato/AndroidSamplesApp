@@ -5,7 +5,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import com.example.ktAndroidSample.Picker.PickerActivity
+import com.example.ktAndroidSample.picker.PickerActivity
 import com.example.ktAndroidSample.databinding.ActivityMainBinding
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
 import com.example.ktAndroidSample.service.ServiceActivity
