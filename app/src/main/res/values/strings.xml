@@ -1,4 +1,5 @@
 <resources>
+    <!--  MediaPlayer  -->
     <string name="app_name">KtAndroidSample</string>
     <string name="tv_loop">リピート再生</string>
     <string name="bt_play_play">再生</string>
@@ -6,10 +7,19 @@
     <string name="bt_forwad"><![CDATA[>>]]></string>
     <string name="bt_play_pause">一時停止</string>
 
+    <!--  Service  -->
     <string name="bt_play_stop">停止</string>
     <string name="msg_notification_title_start">再生開始</string>
     <string name="msg_notification_text_start">音声ファイルの再生を開始しました</string>
     <string name="msg_notification_title_finish">再生終了</string>
     <string name="msg_notification_text_finish">音声ファイルの再生が終了しました</string>
     <string name="notification_channel_name">サービスサンプル通知</string>
+
+    <!--  Picker  -->
+    <string name="txt_pick_date">What day?</string>
+    <string name="txt_pick_time">What time?</string>
+    <string name="bt_pick_date">Pick date</string>
+    <string name="bt_pick_time">Pick time</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
