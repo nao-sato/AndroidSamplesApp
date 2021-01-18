@@ -91,7 +91,7 @@ class MediaPlayerActivity : AppCompatActivity() {
         }
     }
     private fun onLoopSwitch(){
-        binding.swLoop.setOnCheckedChangeListener{ buttonView: CompoundButton, isChecked: Boolean ->
+        binding.swLoop.setOnCheckedChangeListener{ _: CompoundButton, isChecked: Boolean ->
             player?.isLooping = isChecked
         }
     }

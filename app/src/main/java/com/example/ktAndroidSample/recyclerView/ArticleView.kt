@@ -4,8 +4,10 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ktAndroidSample.R
 import com.example.ktAndroidSample.databinding.ActivityRecyclerViewBinding
 import com.example.ktAndroidSample.databinding.RowRecyclerViewBinding
 
@@ -19,7 +21,6 @@ class ArticleView: RecyclerView {
 
     init {
         adapter = customAdapter
-        setHasFixedSize(true)
         layoutManager = LinearLayoutManager(context)
     }
 
@@ -49,6 +50,7 @@ class ArticleView: RecyclerView {
         private fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
             val data = items[position]
             holder.binding.view.text = data
+            holder.binding.view.setBackgroundColor(ContextCompat.getColor(context, if (position % 2 == 0) R.color.CornflowerBlue else R.color.LightSteelBlue))
         }
 
         class ItemViewHolder(val binding: RowRecyclerViewBinding): ViewHolder(binding.root)
