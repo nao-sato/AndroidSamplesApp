@@ -29,6 +29,7 @@ class ServiceActivity : AppCompatActivity() {
     private fun initialize(){
         onPlayButton()
         onStopButton()
+        startFromNotification()
     }
 
     private fun onPlayButton(){
@@ -51,8 +52,18 @@ class ServiceActivity : AppCompatActivity() {
                 btPlay.isEnabled = true
                 btStop.isEnabled = false
             }
-            Toast.makeText(applicationContext,"サービスを停止しました。", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext,"サービスを停止しました。", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun startFromNotification(){
+        val fromNotify = intent.getBooleanExtra(MyService.KEY_NOTIFY,false)
+        if (fromNotify)
+            binding.apply {
+                btPlay.isEnabled = false
+                btStop.isEnabled = true
+            }
+
     }
 
     companion object{

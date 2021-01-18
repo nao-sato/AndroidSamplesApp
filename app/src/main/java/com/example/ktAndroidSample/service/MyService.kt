@@ -44,12 +44,11 @@ class MyService : Service() {
 
     private fun notificationOnStart(){
 
-        val stopServiceIntent = PendingIntent.getActivity(
-                applicationContext,
-                0,
-                Intent(applicationContext,ServiceActivity::class.java),
-                PendingIntent.FLAG_CANCEL_CURRENT
-        )
+        val intent = Intent(applicationContext,ServiceActivity::class.java)
+        intent.putExtra(KEY_NOTIFY,true)
+
+        val stopServiceIntent = PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT)
+
         val notification = NotificationCompat.Builder(applicationContext,"myservice_notification_channel")
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setContentTitle(getString(R.string.msg_notification_title_start))
@@ -73,5 +72,9 @@ class MyService : Service() {
 
     override fun onDestroy() {
         notificationOnStop()
+    }
+
+    companion object{
+        val KEY_NOTIFY = "key_notify"
     }
 }
