@@ -10,6 +10,7 @@ import com.example.ktAndroidSample.databinding.ActivityMainBinding
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
 import com.example.ktAndroidSample.recyclerView.RecyclerViewActivity
 import com.example.ktAndroidSample.service.ServiceActivity
+import com.example.ktAndroidSample.viewPager2.ViewPager2Activity
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
             ServiceActivity::class.java.simpleName -> ServiceActivity.start(this)
             PickerActivity::class.java.simpleName -> PickerActivity.start(this)
             RecyclerViewActivity::class.java.simpleName -> RecyclerViewActivity.start(this)
+            ViewPager2Activity::class.java.simpleName -> ViewPager2Activity.start(this)
         }
     }
 
