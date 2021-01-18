@@ -22,6 +22,7 @@ class RecyclerViewActivity : AppCompatActivity() {
     private fun initialize(){
         initBinding()
         initView()
+        initSwipeRefreshLayout()
     }
 
     private fun initBinding(){
@@ -30,8 +31,17 @@ class RecyclerViewActivity : AppCompatActivity() {
 
     private fun initView(){
         binding.view.customAdapter.refresh(makeIndex())
-        Log.d("RecyclerList", {makeIndex().size}.toString())
 
+    }
+    private fun initSwipeRefreshLayout() {
+        binding.swipe.setOnRefreshListener {
+            initData()
+        }
+    }
+
+    private fun initData() {
+        binding.view.customAdapter.refresh(makeIndex())
+        binding.swipe.isRefreshing = false
     }
 
     private fun makeIndex(): List<String>{
