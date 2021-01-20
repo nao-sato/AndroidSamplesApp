@@ -5,11 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView style="?android:textAppearanceMedium"
-        android:padding="16dp"
-        android:lineSpacingMultiplier="1.2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/lorem_ipsum" />
+        <TextView
+            android:id="@+id/word"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30sp" />
+
     </ScrollView>
 </layout>
