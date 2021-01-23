@@ -28,5 +28,8 @@
     <string name="F3">Thank u …</string>
     <string name="hello_blank_fragment">Sample</string>
 
-
+    <!--  Room  -->
+    <string name="require_name">May I have ur name?</string>
+    <string name="name">Name</string>
+    <string name="check">Is it OK?</string>
 </resources>
