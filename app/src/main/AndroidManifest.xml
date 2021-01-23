@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KtAndroidSample">
-        <activity android:name=".viewPager2.ViewPager2Activity"></activity>
+        <activity android:name=".room.RoomActivity"></activity>
+        <activity android:name=".viewPager2.ViewPager2Activity" />
         <activity android:name=".recyclerView.RecyclerViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
