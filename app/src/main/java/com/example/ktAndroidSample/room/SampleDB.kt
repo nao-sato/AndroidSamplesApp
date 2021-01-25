@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 @Database(entities = [SampleEntity::class], version = 1)
 abstract class SampleDB: RoomDatabase() {
 
-    abstract fun userDao(): SampleDao
+    abstract fun sampleDao(): SampleDao
 
     companion object {
 

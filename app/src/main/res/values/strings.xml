@@ -32,4 +32,8 @@
     <string name="require_name">May I have ur name?</string>
     <string name="name">Name</string>
     <string name="check">Is it OK?</string>
+    <string name="bt_female">Female</string>
+    <string name="bt_male">male</string>
+    <string name="auto_fill">name</string>
+    <string name="greet">Nice to meet u!!</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.ktAndroidSample.room
+package com.example.ktAndroidSample.room.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
