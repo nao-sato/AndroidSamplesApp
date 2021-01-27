@@ -2,6 +2,7 @@ package com.example.ktAndroidSample.room.view.ui
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,12 +28,7 @@ class RequireFragment(private val con: Context) : Fragment() {
     }
 
     private fun initialize(){
-        initView()
         initListener()
-    }
-
-    private fun initView(){
-        binding.viewModel = requireViewModel
     }
 
     private fun initListener(){
@@ -63,11 +59,16 @@ class RequireFragment(private val con: Context) : Fragment() {
                         negativeButton(R.string.warn_back)
                     }
             }else{
-                when(binding.radioMale.isChecked){
-                    true -> requireViewModel.honorific = "Mr."
-                    false -> requireViewModel.honorific = "Ms."
+                val honorific: String
+                = when(binding.radioMale.isChecked){
+                    true -> "Mr."
+                    false -> "Ms."
                 }
-                requireViewModel.setData(SampleDB.getInstance(con))
+                requireViewModel.setData(
+                    SampleDB.getInstance(con),
+                    honorific,
+                    binding.editTextName.text.toString()
+                )
                 activity?.supportFragmentManager?.beginTransaction()
                     ?.replace(R.id.container, RoomFragment())?.commit()
             }

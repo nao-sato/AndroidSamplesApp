@@ -1,5 +1,6 @@
 package com.example.ktAndroidSample.room.view.ui
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.ktAndroidSample.room.SampleDB
 import com.example.ktAndroidSample.room.SampleEntity
@@ -9,10 +10,7 @@ import kotlinx.coroutines.launch
 
 class RequireViewModel : ViewModel() {
 
-    var honorific:String = ""
-    var name: String = ""
-
-    fun setData(db: SampleDB){
+    fun setData(db: SampleDB, honorific: String, name: String){
         CoroutineScope(Dispatchers.IO).launch {
             db.sampleDao().insert(SampleEntity(1,honorific, name))
         }

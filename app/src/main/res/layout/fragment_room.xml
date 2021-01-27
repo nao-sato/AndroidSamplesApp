@@ -3,11 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="name"
-            type="com.example.ktAndroidSample.room.SampleEntity" />
-    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,11 +21,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="1dp"
-            android:layout_height="26dp"
-            android:text="@{name.honorific}"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
+            android:id="@+id/txt_honorific"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintEnd_toStartOf="@+id/txt_name"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="@+id/greet"
@@ -38,11 +33,11 @@
             app:layout_constraintEnd_toEndOf="@+id/greet"/>
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{name.name}"
-            app:layout_constraintStart_toEndOf="@+id/textView2"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@+id/txt_honorific"
             app:layout_constraintTop_toBottomOf="@+id/greet"
             app:layout_constraintEnd_toEndOf="@+id/greet"/>
 

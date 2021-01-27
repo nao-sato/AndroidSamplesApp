@@ -1,6 +1,8 @@
 package com.example.ktAndroidSample.room.view.ui
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +12,7 @@ import com.example.ktAndroidSample.databinding.FragmentRoomBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class RoomFragment : Fragment() {
 
@@ -25,8 +28,13 @@ class RoomFragment : Fragment() {
 
     private fun initialize(){
         CoroutineScope(Dispatchers.IO).launch {
-            binding.name = viewModel.getHonorific()
+            val entity = viewModel.getHonorific()
+            withContext(Dispatchers.Main){
+                binding.txtHonorific.text = entity.honorific
+                binding.txtName.text = entity.name
+            }
         }
+
     }
 
 
