@@ -1,8 +1,8 @@
 package com.example.ktAndroidSample.room
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "name")
-data class SampleEntity (var honorific: String, var name: String)
+data class SampleEntity (@PrimaryKey val id: Int, var honorific: String, var name: String)
 
-//    @PrimaryKey val id: Clock = SystemClock.currentGnssTimeClock()

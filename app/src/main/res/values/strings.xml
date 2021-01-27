@@ -36,4 +36,7 @@
     <string name="bt_male">male</string>
     <string name="auto_fill">name</string>
     <string name="greet">Nice to meet u!!</string>
+    <string name="warn_empty_name">Please enter ur name.</string>
+    <string name="warn_empty_gender">Please select your gender</string>
+    <string name="warn_back">×</string>
 </resources>

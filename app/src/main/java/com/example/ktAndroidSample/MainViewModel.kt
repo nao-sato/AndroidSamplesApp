@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.example.ktAndroidSample.picker.PickerActivity
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
 import com.example.ktAndroidSample.recyclerView.RecyclerViewActivity
+import com.example.ktAndroidSample.room.view.RoomActivity
 import com.example.ktAndroidSample.service.ServiceActivity
 import com.example.ktAndroidSample.viewPager2.ViewPager2Activity
 
@@ -18,7 +19,8 @@ class MainViewModel: ViewModel() {
                 Pair("Service", ServiceActivity::class.java.simpleName),
                 Pair("Picker", PickerActivity::class.java.simpleName),
                 Pair("RecyclerView", RecyclerViewActivity::class.java.simpleName),
-                Pair("ViewPager2", ViewPager2Activity::class.java.simpleName)
+                Pair("ViewPager2", ViewPager2Activity::class.java.simpleName),
+                Pair("Room",RoomActivity::class.java.simpleName)
             )
         )
     }

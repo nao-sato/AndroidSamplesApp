@@ -22,8 +22,8 @@ class RoomFragment : Fragment() {
 
     private fun initialize(){
         binding.apply {
-            honorific = viewModel.getHonorific()
-            name = viewModel.getName()
+            honorific = viewModel.fHonorific
+            name = viewModel.fName
         }
     }
 
