@@ -13,8 +13,11 @@ class FragmentViewModel : ViewModel(){
 
     val db = SampleDB.getInstance(SampleApplication.appContext)
 
-    suspend fun getHonorific():SampleEntity {
+    suspend fun getEntity():SampleEntity {
           return db.sampleDao().getUser(1)
+    }
+    suspend fun delateData(sampleEntity: SampleEntity){
+        db.sampleDao().delete(sampleEntity)
     }
 
 }

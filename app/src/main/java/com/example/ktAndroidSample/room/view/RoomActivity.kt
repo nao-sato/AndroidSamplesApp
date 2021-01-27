@@ -14,7 +14,7 @@ class RoomActivity : AppCompatActivity() {
         setContentView(R.layout.activity_room)
 
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().replace(R.id.container, RequireFragment(this))
+            supportFragmentManager.beginTransaction().add(R.id.container, RequireFragment())
                 .commit()
         }
     }

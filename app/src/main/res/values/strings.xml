@@ -39,4 +39,5 @@
     <string name="warn_empty_name">Please enter ur name.</string>
     <string name="warn_empty_gender">Please select your gender</string>
     <string name="warn_back">×</string>
+    <string name="change_name">Change name</string>
 </resources>

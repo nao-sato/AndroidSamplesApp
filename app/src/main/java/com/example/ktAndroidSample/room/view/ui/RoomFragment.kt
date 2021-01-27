@@ -1,13 +1,12 @@
 package com.example.ktAndroidSample.room.view.ui
 
-import android.content.ContentValues.TAG
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.ktAndroidSample.R
 import com.example.ktAndroidSample.databinding.FragmentRoomBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -27,14 +26,33 @@ class RoomFragment : Fragment() {
     }
 
     private fun initialize(){
+        initView()
+        initListener()
+    }
+
+    private fun initView(){
         CoroutineScope(Dispatchers.IO).launch {
-            val entity = viewModel.getHonorific()
+            val entity = viewModel.getEntity()
             withContext(Dispatchers.Main){
                 binding.txtHonorific.text = entity.honorific
                 binding.txtName.text = entity.name
             }
         }
+    }
 
+    private fun initListener(){
+        binding.btChangeName.setOnClickListener{
+            CoroutineScope(Dispatchers.IO).launch {
+                val entity = viewModel.getEntity()
+                viewModel.delateData(entity)
+            }
+            launcherRequireFragment()
+        }
+    }
+
+    private fun launcherRequireFragment(){
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.replace(R.id.container, RequireFragment())?.commit()
     }
 
 

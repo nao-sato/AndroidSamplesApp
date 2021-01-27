@@ -10,12 +10,16 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.afollestad.materialdialogs.MaterialDialog
 import com.example.ktAndroidSample.R
+import com.example.ktAndroidSample.SampleApplication
 import com.example.ktAndroidSample.databinding.FragmentRequireBinding
 import com.example.ktAndroidSample.room.SampleDB
 
-class RequireFragment(private val con: Context) : Fragment() {
+class RequireFragment : Fragment() {
+
     lateinit var binding: FragmentRequireBinding
+
     private val requireViewModel: RequireViewModel by viewModels()
+    private val con = SampleApplication.appContext
 
     override fun onCreateView(
         inflater: LayoutInflater,
