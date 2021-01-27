@@ -1,4 +1,4 @@
-package com.example.ktAndroidSample.room.view
+package com.example.ktAndroidSample.room.view.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.ktAndroidSample.databinding.FragmentRoomBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class RoomFragment : Fragment() {
 
@@ -21,9 +24,8 @@ class RoomFragment : Fragment() {
     }
 
     private fun initialize(){
-        binding.apply {
-            honorific = viewModel.fHonorific
-            name = viewModel.fName
+        CoroutineScope(Dispatchers.IO).launch {
+            binding.name = viewModel.getHonorific()
         }
     }
 

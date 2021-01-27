@@ -9,10 +9,10 @@ interface SampleDao {
     fun getUser(id: Int): SampleEntity
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertTodo(sampleEntity: SampleEntity)
+    fun insert(sampleEntity: SampleEntity)
 
     @Delete
-    fun deleteTodo(sampleEntity: SampleEntity)
+    fun delete(sampleEntity: SampleEntity)
 }
 //A failure occurred while executing org.jetbrains.kotlin.gradle.internal.KaptExecution
 //上のエラーが来たら大体Daoの記述がおかしい。
