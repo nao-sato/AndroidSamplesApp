@@ -50,13 +50,12 @@ class RequireFragment : Fragment() {
     private fun initClick(){
         binding.btConfirm.setOnClickListener{
             if (binding.editTextName.text.isEmpty()){
-
-                    MaterialDialog(con).show {
+                    MaterialDialog(requireContext()).show {
                         title(R.string.warn_empty_name)
                         negativeButton(R.string.warn_back)
                     }
             }else if (!binding.radioMale.isChecked && !binding.radioFemale.isChecked){
-                    MaterialDialog(con).show {
+                    MaterialDialog(requireContext()).show {
                         title(R.string.warn_empty_gender)
                         negativeButton(R.string.warn_back)
                     }
