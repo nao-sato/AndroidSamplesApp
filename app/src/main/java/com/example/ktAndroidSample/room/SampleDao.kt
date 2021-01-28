@@ -5,6 +5,9 @@ import androidx.room.*
 @Dao
 interface SampleDao {
 
+    @Query("SELECT * FROM name")
+    fun loadAllTodo(): SampleEntity
+
     @Query("SELECT * FROM name where id = :id")
     fun getUser(id: Int): SampleEntity
 

@@ -13,7 +13,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class RoomFragment : Fragment() {
+class GreetFragment : Fragment() {
 
     lateinit var binding: FragmentRoomBinding
     private val viewModel: FragmentViewModel by viewModels()

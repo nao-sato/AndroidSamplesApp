@@ -1,8 +1,6 @@
 package com.example.ktAndroidSample.room.view.ui
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -64,9 +62,9 @@ class RequireFragment : Fragment() {
                     }
             }else{
                 val honorific: String
-                = when(binding.radioMale.isChecked){
-                    true -> "Mr."
-                    false -> "Ms."
+                = when(binding.gender.checkedRadioButtonId){
+                    R.id.radio_male -> "Mr."
+                    else -> "Ms."
                 }
                 requireViewModel.setData(
                     SampleDB.getInstance(con),
@@ -74,7 +72,7 @@ class RequireFragment : Fragment() {
                     binding.editTextName.text.toString()
                 )
                 activity?.supportFragmentManager?.beginTransaction()
-                    ?.replace(R.id.container, RoomFragment())?.commit()
+                    ?.replace(R.id.container, GreetFragment())?.commit()
             }
 
         }
