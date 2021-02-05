@@ -19,7 +19,7 @@ import com.example.ktAndroidSample.databinding.ActivityViewPager2Binding
 import com.example.ktAndroidSample.recyclerView.RecyclerViewActivity
 
 
-private const val NUM_PAGES = 4
+private const val NUM_PAGES = 3
 
 class ViewPager2Activity : FragmentActivity() {
 

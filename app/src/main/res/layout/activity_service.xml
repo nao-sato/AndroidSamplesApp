@@ -6,7 +6,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".service.ServiceActivity">
+        tools:context=".service.ServiceActivity"
+        android:background="@drawable/main_gradation">
 
         <Button
             android:id="@+id/bt_play"

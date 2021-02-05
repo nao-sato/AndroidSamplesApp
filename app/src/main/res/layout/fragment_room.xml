@@ -7,13 +7,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@drawable/main_gradation">
 
         <TextView
             android:id="@+id/greet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="400dp"
+            android:layout_marginBottom="250dp"
             android:text="@string/greet"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
