@@ -1,9 +1,12 @@
 package com.example.ktAndroidSample
 
+import android.app.Activity
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.activity.ComponentActivity
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,11 +16,7 @@ class SamplesView: RecyclerView {
 
     constructor(ctx: Context) : super(ctx)
     constructor(ctx: Context, attrs: AttributeSet?) : super(ctx, attrs)
-    constructor(ctx: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
-        ctx,
-        attrs,
-        defStyleAttr
-    )
+    constructor(ctx: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(ctx, attrs, defStyleAttr)
 
     val customAdapter by lazy { Adapter(context) }
 
@@ -32,10 +31,11 @@ class SamplesView: RecyclerView {
     class Adapter(val context: Context): RecyclerView.Adapter<ViewHolder>() {
 
         var callback: Callback? = null
+        val viewModel: MainViewModel by (context as ComponentActivity).viewModels ()
 
-        private val items = mutableListOf<Pair<String,String>>()
+        private val items = mutableListOf<Triple<String,String,Int>>()
 
-        fun refresh(list: List<Pair<String,String>>){
+        fun refresh(list: List<Triple<String,String,Int>>){
             items.apply {
                 clear()
                 addAll(list)
@@ -56,7 +56,8 @@ class SamplesView: RecyclerView {
             val data = items[position]
             holder.binding.apply {
                 title = data.first
-                root.setOnClickListener{ callback?.onClick(data.second)}
+                eachItem.setOnClickListener{ callback?.onClick(data.second)}
+                guid.setOnClickListener{viewModel.clickGuid.postValue(data.third)}
             }
         }
 

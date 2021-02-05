@@ -1,10 +1,12 @@
 package com.example.ktAndroidSample
 
 import android.os.Bundle
+import android.os.Message
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import com.afollestad.materialdialogs.MaterialDialog
 import com.example.ktAndroidSample.picker.PickerActivity
 import com.example.ktAndroidSample.databinding.ActivityMainBinding
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
@@ -37,6 +39,18 @@ class MainActivity : AppCompatActivity() {
     private fun initViewModel() {
         viewModel.activityPairs.observe(this@MainActivity, Observer {
             binding.samplesView.customAdapter.refresh(it)
+        })
+        viewModel.clickGuid.observe(this, Observer {
+            MaterialDialog(this).show {
+                when(it){
+                    R.string.media_desc ->  title(R.string.media_name)
+                    R.string.service_desc -> title(R.string.service_name)
+                    else -> title(null)
+                }
+
+                message(it)
+                negativeButton(R.string.warn_back)
+            }
         })
     }
 

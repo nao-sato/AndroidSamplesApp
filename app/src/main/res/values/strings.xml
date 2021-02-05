@@ -1,13 +1,21 @@
 <resources>
-    <!--  MediaPlayer  -->
+
     <string name="app_name">AndroidSample</string>
+
+    <!--  MediaPlayer  -->
+    <string name="media_name">MediaPlayer</string>
     <string name="tv_loop">リピート再生</string>
     <string name="bt_play_play">再生</string>
     <string name="bt_back"><![CDATA[<<]]></string>
     <string name="bt_forward"><![CDATA[>>]]></string>
     <string name="bt_play_pause">一時停止</string>
+    <string name="media_desc">
+        MediaPlayerを使い音楽ファイルを再生させています。\n
+        「再生」「停止」「リピート再生」に加え、今回は一曲しかありませんが「進む」「戻る」の各ボタンを配置しています。
+    </string>
 
     <!--  Service  -->
+    <string name="service_name">Service</string>
     <string name="bt_service_start">開始</string>
     <string name="bt_service_stop">終了</string>
     <string name="msg_notification_title_start">開始のお知らせ</string>
@@ -15,18 +23,27 @@
     <string name="msg_notification_title_finish">終了のお知らせ</string>
     <string name="msg_notification_text_finish">サービスが終了しました</string>
     <string name="notification_channel_name">サービスサンプル通知</string>
+    <string name="service_desc">Serviceを使ってバックグラウンド処理をしています。</string>
+
+    <!--  RecyclerView  -->
+    <string name="recycle_desc">w</string>
+
 
     <!--  Picker  -->
     <string name="txt_pick_date">What day?</string>
     <string name="txt_pick_time">What time?</string>
     <string name="bt_pick_date">Pick date</string>
     <string name="bt_pick_time">Pick time</string>
+    <string name="picker_desc">g</string>
+
 
     <!-- ViewPager2 -->
     <string name="F1">Hello</string>
     <string name="F2">ViewPager2!</string>
     <string name="F3">Thank u …</string>
     <string name="hello_blank_fragment">Sample</string>
+    <string name="viewpager_desc">s</string>
+
 
     <!--  Room  -->
     <string name="require_name">May I have ur name?</string>
@@ -40,4 +57,6 @@
     <string name="warn_empty_gender">Please select your gender</string>
     <string name="warn_back">×</string>
     <string name="change_name">Change name</string>
+    <string name="room_desc">b</string>
+
 </resources>
