@@ -23,29 +23,44 @@
     <string name="msg_notification_title_finish">終了のお知らせ</string>
     <string name="msg_notification_text_finish">サービスが終了しました</string>
     <string name="notification_channel_name">サービスサンプル通知</string>
-    <string name="service_desc">Serviceを使ってバックグラウンド処理をしています。</string>
+    <string name="service_desc">
+        Serviceを使ってバックグラウンド処理をしています。\n
+        通知からActivityを起動させると開始ボタンがFalseに、終了ボタンがTrueにになるように設定しています。
+    </string>
 
     <!--  RecyclerView  -->
-    <string name="recycle_desc">w</string>
+    <string name="recycler_name">RecyclerView</string>
+    <string name="recycle_desc">
+        RecyclerViewの基本的なサンプルです。\n
+        AdapterやlayoutManagerはArticleViewで初期化しています。\n
+        その他の設定はAdapterクラスで済ませています。\n
+        今回は非同期処理はありませんが、備忘録のためSwipeRefreshLayoutも実装しています。
+    </string>
 
 
     <!--  Picker  -->
+    <string name="picker_name">Picker</string>
     <string name="txt_pick_date">What day?</string>
     <string name="txt_pick_time">What time?</string>
     <string name="bt_pick_date">Pick date</string>
     <string name="bt_pick_time">Pick time</string>
-    <string name="picker_desc">g</string>
+    <string name="picker_desc">
+        DatePickerとTimePickerを使用しています。\n
+        pickしたデータはそれぞれActivityに反映させています。
+    </string>
 
 
     <!-- ViewPager2 -->
+    <string name="pager2_name">ViewPager2</string>
     <string name="F1">Hello</string>
     <string name="F2">ViewPager2!</string>
     <string name="F3">Thank u …</string>
     <string name="hello_blank_fragment">Sample</string>
-    <string name="viewpager_desc">s</string>
+    <string name="viewpager_desc">ViewPager2の基礎的なサンプルです</string>
 
 
     <!--  Room  -->
+    <string name="room_name">Room</string>
     <string name="require_name">May I have ur name?</string>
     <string name="name">Name</string>
     <string name="check">Is it OK?</string>
@@ -57,6 +72,11 @@
     <string name="warn_empty_gender">Please select your gender</string>
     <string name="warn_back">×</string>
     <string name="change_name">Change name</string>
-    <string name="room_desc">b</string>
+    <string name="room_desc">
+        Roomを使用し、データを永続化させています。\n
+        名前を入れて「is it OK?」をクリックでデータが入り、GreetFragmentに遷移します。\n
+        GreetFragmentでは「Change Name」をクリックでRequireFragmentに戻り、データはnullになります。\n
+        データが入っている時と入っていない時の初期画面を分岐させています。
+    </string>
 
 </resources>

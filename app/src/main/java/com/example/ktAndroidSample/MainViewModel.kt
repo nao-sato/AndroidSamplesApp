@@ -1,9 +1,13 @@
 package com.example.ktAndroidSample
 
+import android.content.Context
+import androidx.activity.ComponentActivity
 import androidx.annotation.StringRes
+import androidx.core.view.KeyEventDispatcher
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.afollestad.materialdialogs.MaterialDialog
 import com.example.ktAndroidSample.picker.PickerActivity
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
 import com.example.ktAndroidSample.recyclerView.RecyclerViewActivity
@@ -26,5 +30,21 @@ class MainViewModel: ViewModel() {
                         Triple("Room",RoomActivity::class.java.simpleName,R.string.room_desc)
                 )
         )
+    }
+
+    fun initDialog(data:Int,context: Context){
+        MaterialDialog(context).show {
+            when(data){
+                R.string.media_desc ->  title(R.string.media_name)
+                R.string.service_desc -> title(R.string.service_name)
+                R.string.picker_desc -> title(R.string.picker_name)
+                R.string.recycle_desc -> title(R.string.recycler_name)
+                R.string.viewpager_desc -> title(R.string.pager2_name)
+                R.string.room_desc -> title(R.string.room_name)
+                else -> title(null)
+            }
+            message(data)
+            negativeButton(R.string.warn_back)
+        }
     }
 }

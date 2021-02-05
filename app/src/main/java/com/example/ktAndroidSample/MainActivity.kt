@@ -41,16 +41,7 @@ class MainActivity : AppCompatActivity() {
             binding.samplesView.customAdapter.refresh(it)
         })
         viewModel.clickGuid.observe(this, Observer {
-            MaterialDialog(this).show {
-                when(it){
-                    R.string.media_desc ->  title(R.string.media_name)
-                    R.string.service_desc -> title(R.string.service_name)
-                    else -> title(null)
-                }
-
-                message(it)
-                negativeButton(R.string.warn_back)
-            }
+            viewModel.initDialog(it,this)
         })
     }
 
