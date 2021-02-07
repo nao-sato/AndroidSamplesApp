@@ -75,6 +75,6 @@ class MyService : Service() {
     }
 
     companion object{
-        val KEY_NOTIFY = "key_notify"
+        const val KEY_NOTIFY = "key_notify"
     }
 }

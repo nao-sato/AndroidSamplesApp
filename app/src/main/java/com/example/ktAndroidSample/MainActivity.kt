@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.afollestad.materialdialogs.MaterialDialog
+import com.example.ktAndroidSample.ImplicitIntent.MapActivity
 import com.example.ktAndroidSample.picker.PickerActivity
 import com.example.ktAndroidSample.databinding.ActivityMainBinding
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
@@ -37,19 +38,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViewModel() {
-        viewModel.activityPairs.observe(this@MainActivity, Observer {
-            binding.samplesView.customAdapter.refresh(it)
-        })
-        viewModel.clickGuid.observe(this, Observer {
-            viewModel.initDialog(it,this)
-        })
+        viewModel.apply {
+            activityTriple.observe(this@MainActivity, Observer { binding.samplesView.customAdapter.refresh(it) })
+            clickGuid.observe(this@MainActivity, Observer { viewModel.initDialog(it,this@MainActivity) })
+        }
     }
 
+    private fun initData(){
+        viewModel.initData()
+    }
 
     private fun initLayout() {
         initRecyclerView()
     }
-
     private fun initRecyclerView() {
         binding.samplesView.customAdapter.callback = object : SamplesView.Callback {
             override fun onClick(ActivitySimpleName: String) {
@@ -66,10 +67,7 @@ class MainActivity : AppCompatActivity() {
             RecyclerViewActivity::class.java.simpleName -> RecyclerViewActivity.start(this)
             ViewPager2Activity::class.java.simpleName -> ViewPager2Activity.start(this)
             RoomActivity::class.java.simpleName -> RoomActivity.start(this)
+            MapActivity::class.java.simpleName -> MapActivity.start(this)
         }
-    }
-
-    private fun initData(){
-        viewModel.initData()
     }
 }

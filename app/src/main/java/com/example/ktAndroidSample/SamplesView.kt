@@ -31,11 +31,11 @@ class SamplesView: RecyclerView {
     class Adapter(val context: Context): RecyclerView.Adapter<ViewHolder>() {
 
         var callback: Callback? = null
-        val viewModel: MainViewModel by (context as ComponentActivity).viewModels ()
+        private val viewModel: MainViewModel by (context as ComponentActivity).viewModels ()
 
-        private val items = mutableListOf<Triple<String,String,Int>>()
+        private val items = mutableListOf<Triple<String, String, Int>>()
 
-        fun refresh(list: List<Triple<String,String,Int>>){
+        fun refresh(list: List<Triple<String, String, Int>>){
             items.apply {
                 clear()
                 addAll(list)

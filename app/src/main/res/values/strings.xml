@@ -79,4 +79,12 @@
         データが入っている時と入っていない時の初期画面を分岐させています。
     </string>
 
+    <!--  ImplicitIntent  -->
+    <string name="ImplicitIntent_name">ImplicitIntent</string>
+    <string name="txt_request">Tell me purpose location, Please…</string>
+    <string name="current_location">Current location</string>
+    <string name="bt_search">search</string>
+    <string name="ImplicitIntent_desc">暗黙的インテントを使ったMapのサンプルです。</string>
+
+
 </resources>
