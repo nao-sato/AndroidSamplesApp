@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.afollestad.materialdialogs.MaterialDialog
-import com.example.ktAndroidSample.ImplicitIntent.MapActivity
+import com.example.ktAndroidSample.implicit_intent.MapActivity
 import com.example.ktAndroidSample.picker.PickerActivity
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
 import com.example.ktAndroidSample.recyclerView.RecyclerViewActivity

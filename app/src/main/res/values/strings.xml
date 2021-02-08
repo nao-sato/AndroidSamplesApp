@@ -83,6 +83,8 @@
     <string name="ImplicitIntent_name">ImplicitIntent</string>
     <string name="txt_request">Tell me purpose location, Please…</string>
     <string name="current_location">Current location</string>
+    <string name="ed_search">Search here</string>
+    <string name="null_location">Please fill out form</string>
     <string name="bt_search">search</string>
     <string name="ImplicitIntent_desc">暗黙的インテントを使ったMapのサンプルです。</string>
 

@@ -1,13 +1,11 @@
 package com.example.ktAndroidSample
 
 import android.os.Bundle
-import android.os.Message
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import com.afollestad.materialdialogs.MaterialDialog
-import com.example.ktAndroidSample.ImplicitIntent.MapActivity
+import com.example.ktAndroidSample.implicit_intent.MapActivity
 import com.example.ktAndroidSample.picker.PickerActivity
 import com.example.ktAndroidSample.databinding.ActivityMainBinding
 import com.example.ktAndroidSample.mediaPlayer.MediaPlayerActivity
