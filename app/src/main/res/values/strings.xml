@@ -88,5 +88,7 @@
     <string name="bt_search">search</string>
     <string name="ImplicitIntent_desc">暗黙的インテントを使ったMapのサンプルです。</string>
 
+<!--  test  -->
+
 
 </resources>
